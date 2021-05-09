@@ -1,0 +1,28 @@
+//用的rest client插件
+//@符号定义变量
+@uri=http://localhost:4000/
+
+###
+//GET http://localhost:4000/products
+//用{{}}来访问变量
+GET {{uri}}products
+//每一个请求通过三个#分开
+###
+GET {{uri}}products/6097938bf75d46298c9b1b14
+
+###
+POST {{uri}}products
+Content-Type: application/json
+
+{
+    "title":"产品4"
+}
+###
+PUT  {{uri}}products/60979f1fcb219023ac841667
+Content-Type: application/json
+
+{
+    "title":"产品44"
+}
+###
+DELETE  {{uri}}products/60979f1fcb219023ac841667
